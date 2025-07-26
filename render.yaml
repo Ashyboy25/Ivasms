@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ivasms-telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
+      - key: IVASMS_EMAIL
+        sync: false
+      - key: IVASMS_PASSWORD
+        sync: false
+
